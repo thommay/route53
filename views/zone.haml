@@ -1,0 +1,24 @@
+%h1 Showing results for #{@zone.domain}
+
+%fieldset
+  %legend Admin Section
+  %table
+    - @records.select {|d| d.type == "NS" or d.type == "SOA"}.each do |rec|
+      %tr
+        %td= rec.name
+        %td= rec.type
+        %td= rec.ttl
+        %td= rec.ip.join(", ")
+
+%fieldset
+  %legend Entries
+  %table
+    - @records.reject {|d| d.type == "NS" or d.type == "SOA"}.each do |rec|
+      %tr
+        %td= rec.name
+        %td= rec.type
+        %td= rec.ttl
+        %td= rec.ip.join(", ")
+
+
+

@@ -1,0 +1,51 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (1.18.2)
+    builder (3.0.0)
+    excon (0.3.8)
+    fog (0.4.0)
+      builder
+      excon (>= 0.3.7)
+      formatador (>= 0.0.16)
+      json
+      mime-types
+      net-ssh (>= 2.0.23)
+      nokogiri (>= 1.4.4)
+      ruby-hmac
+    formatador (0.0.16)
+    haml (3.0.25)
+    json (1.4.6)
+    mime-types (1.16)
+    monkey-lib (0.5.4)
+      backports
+    net-ssh (2.0.23)
+    nokogiri (1.4.4)
+    rack (1.2.1)
+    rack-flash (0.1.1)
+      rack
+    ruby-hmac (0.4.0)
+    sinatra (1.1.2)
+      rack (~> 1.1)
+      tilt (~> 1.2)
+    sinatra-advanced-routes (0.5.1)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+      sinatra-sugar (~> 0.5.0)
+    sinatra-reloader (0.5.0)
+      sinatra (~> 1.0)
+      sinatra-advanced-routes (~> 0.5.0)
+    sinatra-sugar (0.5.0)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+    tilt (1.2.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  fog
+  haml
+  rack-flash
+  sinatra
+  sinatra-reloader

@@ -1,0 +1,29 @@
+!!!
+%html{:lang=>"en", :class=>'no-js'}
+  %head
+    %meta{:charset => 'utf-8'}
+    %meta{'http-equiv'=> "IE=edge,chrome=1"}
+    %meta{:name=>"viewport", :content=> "width=device-width, initial-scale=1.0"}
+    %title= "#{@title} - Route53 Domain interface"
+
+    %link{:rel=>"stylesheet", :href=>"/css/style.css?v=2"}
+    %script{:src=>"/js/libs/modernizr-1.6.min.js"}
+  %body
+    %div{:id=>"container"}
+      %header
+        - if flash.has?(:err)
+          %h3{:class=>"error"}= flash[:err]
+
+        - if flash.has?(:notice)
+          %h3{:class=>"notice"}= flash[:notice]
+
+      %div{:id=>"main"}
+        != yield
+    %script{:src=>"https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"}
+    %script{:src=>"https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.6/jquery-ui.min.js"}
+    %script{:src=>"/js/plugins.js"}
+    %script{:src=>"/js/script.js"}
+    %script{:src=>"/app.js"}
+
+
+
